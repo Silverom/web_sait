@@ -1,0 +1,318 @@
+/* ============================================
+   ФАЙЛ: style.css
+   ОПИСАНИЕ: Кастомные стили для сайта JWT & OAuth
+   Используются ТОЛЬКО для того, чего нет в Kube:
+   - Тёмная шапка и подвал
+   - Карточки с тенями
+   - Сайдбар
+   - Адаптивное мобильное меню
+   ============================================ */
+
+
+/* ============================================
+   ШАПКА САЙТА (HEADER)
+   ============================================ */
+
+.site-header {
+    background-color: #313439;
+    padding: 1.5rem 0 1rem;
+    margin-bottom: 2rem;
+    text-align: center; /* Центрируем всё содержимое */
+}
+
+/* Логотип по центру */
+.site-logo {
+    color: #fff;
+    margin: 0 0 1rem 0; /* Отступ снизу для меню */
+    font-size: 32px;
+}
+
+/* Навигация по центру под заголовком */
+.main-nav {
+    margin: 0;
+}
+
+.nav-menu {
+    display: inline-flex; /* Горизонтальное меню по центру */
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: #e0e1e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #fff;
+}
+
+
+/* ============================================
+   2. КНОПКА БУРГЕР-МЕНЮ (МОБИЛЬНАЯ ВЕРСИЯ)
+   ============================================
+   Kube не даёт готового бургер-меню.
+   Делаем его сами: три полоски, которые 
+   превращаются в крестик при нажатии.
+   ============================================ */
+
+.menu-toggle {
+    display: none; /* Скрыта на десктопе */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-top: 8px;
+}
+
+/* Полоски бургера */
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+
+/* ============================================
+   3. КАРТОЧКИ РАЗДЕЛОВ
+   ============================================ */
+
+/* Сетка карточек — используем CSS Grid вместо Kube col-* */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 равные колонки */
+    gap: 1.5rem; /* Расстояние между карточками */
+    margin: 2rem 0;
+}
+
+/* Сама карточка */
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #3794de;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: rgba(49, 52, 57, 0.65);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Адаптивность карточек */
+@media (max-width: 991px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшете */
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr; /* 1 колонка на мобильном */
+    }
+}
+
+
+/* ============================================
+   4. ИНФОРМАЦИОННЫЙ БЛОК
+   ============================================
+   Используем bg-highlight из Kube для фона,
+   но добавляем свою левую границу для акцента.
+   ============================================ */
+
+.info-box {
+    border-left: 4px solid #3794de; /* Синяя полоса слева */
+    padding: 1.5rem; /* Внутренние отступы */
+    margin: 2rem 0; /* Отступы сверху и снизу */
+    border-radius: 0 3px 3px 0; /* Скругление справа */
+}
+
+
+/* ============================================
+   5. САЙДБАР (БОКОВАЯ ПАНЕЛЬ)
+   ============================================
+   Kube не даёт готового сайдбара.
+   Делаем белые блоки с рамкой для навигации 
+   и формы подписки.
+   ============================================ */
+
+/* Отступ сайдбара сверху (чтобы выровнять с контентом) */
+.sidebar {
+    margin-top: 0;
+}
+
+/* Блок внутри сайдбара */
+.sidebar-block {
+    background: #fff;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-bottom: 1.5rem; /* Отступ между блоками */
+}
+
+/* Заголовок блока сайдбара */
+.sidebar-block h3 {
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Разделительная линия */
+    margin-bottom: 1rem;
+}
+
+/* Список навигации в сайдбаре */
+.sidebar-nav {
+    margin: 0;
+}
+
+/* Пункты списка навигации */
+.sidebar-nav li {
+    margin-bottom: 0.25rem;
+}
+
+/* Ссылки в навигации сайдбара */
+.sidebar-nav a {
+    display: block; /* Ссылка на всю ширину */
+    padding: 0.5rem;
+    color: #313439; /* Тёмный цвет текста */
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Ссылки при наведении */
+.sidebar-nav a:hover {
+    background: #f8f8f8; /* Светло-серый фон (цвет .bg-aluminum из Kube) */
+    color: #3794de; /* Синий цвет */
+}
+
+
+/* ============================================
+   6. ПОДВАЛ САЙТА (FOOTER)
+   ============================================ */
+
+.site-footer {
+    background-color: #313439;
+    color: #e0e1e1;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+}
+
+/* Стили для колонок подвала — добавляем отступы */
+.site-footer .col-4 {
+    padding: 0 1.5rem; /* Отступы между колонками */
+}
+
+.site-footer h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.site-footer a {
+    color: #e0e1e1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.site-footer a:hover {
+    color: #fff;
+}
+
+.site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.site-footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 2rem 0 1rem;
+}
+
+
+/* ============================================
+   7. АДАПТИВНОСТЬ (МОБИЛЬНАЯ ВЕРСИЯ)
+   ============================================
+   Kube сам адаптирует сетку (col-*),
+   но нам нужно дополнительно:
+   - Показать бургер-меню
+   - Скрыть обычное меню
+   - Перестроить карточки в 1 колонку
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Показываем кнопку бургера */
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* Скрываем обычное меню */
+    .main-nav {
+        display: none;
+        width: 100%;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Показываем меню когда добавлен класс is-active (через JS) */
+    .main-nav.is-active {
+        display: block;
+    }
+    
+    /* Меню в колонку на мобильных */
+    .nav-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    /* Пункты меню с разделителями */
+    .nav-menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 0.75rem 0;
+    }
+    
+    /* Сайдбар под контентом на мобильных */
+    .sidebar {
+        margin-top: 2rem;
+    }
+}
+/* Исправление проблемы с выравниванием */
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+}
+
+.row.gutters {
+    margin-left: 0 !important;
+}
