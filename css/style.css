@@ -475,12 +475,21 @@
 }
 
 /* ============================================
-   ИСПРАВЛЕНИЕ ПРОБЛЕМ МОБИЛЬНОЙ ВЕРСИИ
+   ФИНАЛЬНЫЕ ИСПРАВЛЕНИЯ
    ============================================ */
 
 /* Убираем надпись "прокрутите" */
 pre::after {
     display: none !important;
+}
+
+/* Длинный inline-код (токены, URL) переносится */
+p code, li code, td code {
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+    display: inline-block;
+    max-width: 100%;
 }
 
 /* 1. Исправляем переносы в сайдбаре */
@@ -507,8 +516,17 @@ pre code {
 
 /* На мобильном */
 @media (max-width: 768px) {
-    /* Сайдбар */
+    /* Сайдбар на всю ширину */
+    .col-3, .sidebar {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-left: 0 !important;
+    }
+    
     .sidebar-block {
+        width: 100%;
+        box-sizing: border-box;
         padding: 1.5rem;
         margin-bottom: 2rem;
     }
@@ -526,7 +544,7 @@ pre code {
     
     /* Подвал */
     .site-footer .col-4 {
-        width: 100%;
+        width: 100% !important;
         padding: 0 1rem;
         margin-bottom: 2rem;
     }
