@@ -478,6 +478,11 @@
    ИСПРАВЛЕНИЕ ПРОБЛЕМ МОБИЛЬНОЙ ВЕРСИИ
    ============================================ */
 
+/* Убираем надпись "прокрутите" */
+pre::after {
+    display: none !important;
+}
+
 /* 1. Исправляем переносы в сайдбаре */
 .sidebar-block p {
     word-wrap: normal;
@@ -487,24 +492,22 @@
 
 /* 2-3. Исправляем блоки кода */
 pre {
-    width: 100%;
-    box-sizing: border-box;
     overflow-x: auto;
     white-space: pre;
     word-wrap: normal;
     max-width: 100%;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
 }
 
 pre code {
-    display: block;
-    width: 100%;
     white-space: pre;
     word-break: normal;
 }
 
 /* На мобильном */
 @media (max-width: 768px) {
-    /* Сайдбар шире */
+    /* Сайдбар */
     .sidebar-block {
         padding: 1.5rem;
         margin-bottom: 2rem;
@@ -514,20 +517,29 @@ pre code {
         line-height: 1.6;
     }
     
-    /* Код с прокруткой */
+    /* Код */
     pre {
         font-size: 11px;
         padding: 0.75rem;
         margin: 1rem 0;
     }
     
-    /* Индикатор прокрутки */
-    pre::after {
-        content: "← прокрутите →";
-        display: block;
-        text-align: right;
-        font-size: 10px;
-        color: rgba(0,0,0,0.5);
-        margin-top: 0.5rem;
+    /* Подвал */
+    .site-footer .col-4 {
+        width: 100%;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .site-footer p {
+        word-wrap: normal;
+        overflow-wrap: normal;
+        hyphens: none;
+        line-height: 1.6;
+    }
+    
+    .site-footer ul li {
+        word-wrap: normal;
+        overflow-wrap: normal;
     }
 }
