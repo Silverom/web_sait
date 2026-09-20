@@ -473,3 +473,61 @@
         text-align: center;
     }
 }
+
+/* ============================================
+   ИСПРАВЛЕНИЕ ПРОБЛЕМ МОБИЛЬНОЙ ВЕРСИИ
+   ============================================ */
+
+/* 1. Исправляем переносы в сайдбаре */
+.sidebar-block p {
+    word-wrap: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+}
+
+/* 2-3. Исправляем блоки кода */
+pre {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+    max-width: 100%;
+}
+
+pre code {
+    display: block;
+    width: 100%;
+    white-space: pre;
+    word-break: normal;
+}
+
+/* На мобильном */
+@media (max-width: 768px) {
+    /* Сайдбар шире */
+    .sidebar-block {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .sidebar-block p {
+        line-height: 1.6;
+    }
+    
+    /* Код с прокруткой */
+    pre {
+        font-size: 11px;
+        padding: 0.75rem;
+        margin: 1rem 0;
+    }
+    
+    /* Индикатор прокрутки */
+    pre::after {
+        content: "← прокрутите →";
+        display: block;
+        text-align: right;
+        font-size: 10px;
+        color: rgba(0,0,0,0.5);
+        margin-top: 0.5rem;
+    }
+}
