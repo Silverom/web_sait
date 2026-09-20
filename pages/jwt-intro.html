@@ -13,12 +13,20 @@
     <header class="site-header">
         <div class="container">
             <h1 class="site-logo">JWT & OAuth</h1>
-            <nav class="main-nav">
+            
+            <!-- Кнопка бургер-меню (видна только на мобильных) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="main-nav" id="mainNav">
                 <ul class="unstyled nav-menu">
                     <li><a href="../index.html">Главная</a></li>
                     <li><a href="basics.html">Основы</a></li>
                     <li><a href="sessions.html">Сессии</a></li>
-                    <li><a href="jwt-intro.html" class="active">Введение в JWT</a></li>
+                    <li><a href="jwt-intro.html">Введение в JWT</a></li>
                     <li><a href="jwt-structure.html">Структура JWT</a></li>
                     <li><a href="jwt-practice.html">Практика JWT</a></li>
                     <li><a href="oauth-intro.html">Введение в OAuth</a></li>

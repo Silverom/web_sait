@@ -316,3 +316,160 @@
 .row.gutters {
     margin-left: 0 !important;
 }
+
+/* ============================================
+   АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ
+   ============================================ */
+
+/* Планшеты и меньше (до 992px) */
+@media (max-width: 991px) {
+    .site-footer .col-4 {
+        padding: 0 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+    /* === ШАПКА И МЕНЮ === */
+    .site-header {
+        padding: 1rem 0;
+    }
+    
+    .site-header .container {
+        padding: 0 1rem;
+    }
+    
+    .site-logo {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    /* Показываем кнопку бургера */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1000;
+    }
+    
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+    
+    /* Скрываем меню по умолчанию */
+    .main-nav {
+        display: none;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    /* Показываем меню когда есть класс is-active */
+    .main-nav.is-active {
+        display: block;
+    }
+    
+    /* Меню в колонку */
+    .nav-menu {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nav-menu li {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 1rem;
+        font-size: 16px; /* Чтобы не зумилось на iOS */
+    }
+    
+    /* === ОСНОВНОЙ КОНТЕНТ === */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* На мобильном всё в одну колонку */
+    .col-9, .col-3, .col-4 {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    /* Сайдбар под контентом */
+    .sidebar {
+        margin-top: 2rem;
+    }
+    
+    /* Уменьшаем заголовки */
+    h1 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+    h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    /* Текст не переносится по одному слову */
+    p {
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* Карточки в одну колонку */
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Таблица скроллится */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    /* Меню в сайдбаре */
+    .sidebar-nav a {
+        font-size: 16px;
+    }
+    
+    /* Форма */
+    input, textarea, select {
+        font-size: 16px; /* Предотвращает зум на iOS */
+    }
+}
+
+/* Маленькие мобильные (до 480px) */
+@media (max-width: 480px) {
+    .site-logo {
+        font-size: 18px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+    
+    .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
