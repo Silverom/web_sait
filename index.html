@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аутентификация и авторизация</title>
-    <!-- Фреймворк Kube -->
     <link rel="stylesheet" href="css/kube.min.css">
-    <!-- Наши кастомные стили -->
     <link rel="stylesheet" href="css/style.css">
 </head> 
 <body>
 
     <!-- ========== ШАПКА САЙТА ========== -->
-    <!-- Используем Kube: container для ограничения ширины -->
     <header class="site-header">
         <div class="container">
             <h1 class="site-logo">JWT & OAuth</h1>
             
-            <!-- Кнопка бургер-меню (видна только на мобильных) -->
+            <!-- Кнопка бургер-меню (видна только на мобильных устройствах) -->
             <button class="menu-toggle" id="menuToggle" aria-label="Меню">
                 <span></span>
                 <span></span>
@@ -42,25 +39,18 @@
     </header>
 
     <!-- ========== ОСНОВНОЙ КОНТЕНТ ========== -->
-    <!-- container — ограничивает ширину и центрирует (Kube) -->
     <div class="container">
-        <!-- row gutters — строка с отступами между колонками (Kube) -->
         <div class="row gutters">
             
-            <!-- col-9 — 9 из 12 колонок = 75% ширины (Kube) -->
             <main class="col-9">
-                
-                <!-- h1 — главный заголовок страницы -->
                 <h1>Аутентификация и авторизация в современных веб-приложениях</h1>
                 
-                <!-- big — увеличенный текст (Kube) -->
                 <p class="big">В современном мире веб-разработки безопасность данных стоит на первом месте. Каждый раз, когда вы входите в свой аккаунт в социальной сети, проверяете банковское приложение или авторизуетесь через сторонний сервис, за кулисами происходят сложные процессы проверки вашей личности и прав доступа.</p>
                 
                 <p>Понимание того, как работают механизмы аутентификации и авторизации, является критически важным навыком для любого разработчика. От выбора правильного метода зависит не только удобство пользователя, но и защищенность всего приложения от хакерских атак и утечек данных.</p>
                 
                 <p>Этот сайт создан как подробное руководство, которое поможет разобраться в современных подходах к безопасности. Мы рассмотрим как классические методы, так и передовые технологии, такие как JWT (JSON Web Tokens) и протокол OAuth 2.0, и поймем, как они применяются на практике.</p>
 
-                <!-- text-center — центрирование текста (Kube) -->
                 <h2 class="text-center">Что вы узнаете, изучая этот сайт</h2>
                 
                 <ul>
@@ -74,7 +64,7 @@
 
                 <h2 class="text-center">Основные разделы сайта</h2>
                 
-                <!-- Сетка карточек (наши стили + Kube) -->
+                <!-- Сетка карточек (кастомные стили + классы Kube) -->
                 <div class="cards-grid">
                     <div class="card">
                         <h3>JWT (JSON Web Token)</h3>
@@ -95,36 +85,32 @@
                     </div>
                 </div>
 
-                <!-- bg-highlight — светло-голубой фон (Kube) -->
                 <div class="info-box bg-highlight">
-                    <!-- h5 — маленький заголовок (Kube) -->
                     <h3 class="h5">Для кого этот сайт?</h3>
-                    <!-- end — убирает нижний отступ (Kube) -->
                     <p class="end">Этот ресурс будет особенно полезен студентам IT-направлений, начинающим frontend и backend разработчикам, а также всем, кто хочет глубже понять, как обеспечивается безопасность в интернете.</p>
                 </div>
                 
             </main>
 
-            <!-- col-3 — 3 из 12 колонок = 25% ширины (Kube) -->
-                <aside class="col-3 sidebar">
-                    <div class="sidebar-block">
-                        <h3 class="h5">О сайте</h3>
-                        <p class="small">Учебный проект, посвящённый современным методам аутентификации и авторизации в веб-приложениях.</p>
-                        <p class="small"><strong>Автор:</strong> Ломов Р.В.</p>
-                        <p class="small"><strong>Группа:</strong> 835</p>
-                        <p class="small"><strong>Год:</strong> 2026</p>
-                    </div>
+            <aside class="col-3 sidebar">
+                <div class="sidebar-block">
+                    <h3 class="h5">О сайте</h3>
+                    <p class="small">Учебный проект, посвящённый современным методам аутентификации и авторизации в веб-приложениях.</p>
+                    <p class="small"><strong>Автор:</strong> Ломов Р.В.</p>
+                    <p class="small"><strong>Группа:</strong> 835</p>
+                    <p class="small"><strong>Год:</strong> 2026</p>
+                </div>
 
-                    <div class="sidebar-block">
-                        <h3 class="h5">Технологии</h3>
-                        <ul class="unstyled sidebar-nav">
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Kube CSS Framework</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </div>
-                </aside>
+                <div class="sidebar-block">
+                    <h3 class="h5">Технологии</h3>
+                    <ul class="unstyled sidebar-nav">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Kube CSS Framework</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </aside>
 
         </div>
     </div>
@@ -132,10 +118,7 @@
     <!-- ========== ПОДВАЛ САЙТА ========== -->
     <footer class="site-footer">
         <div class="container">
-            <!-- row gutters — строка с отступами (Kube) -->
             <div class="row gutters">
-                
-                <!-- col-4 — 4 из 12 колонок (Kube) -->
                 <div class="col-4">
                     <h4>О проекте</h4>
                     <p>Учебный сайт об аутентификации и авторизации в веб-приложениях</p>
@@ -143,8 +126,7 @@
                 
                 <div class="col-4">
                     <h4>Контакты</h4>
-                    <p>Email: student@example.com</p>
-                    <p>GitHub: github.com/username</p>
+                    <p><a href="https://github.com/Silverom" target="_blank" rel="noopener">GitHub: Silverom</a></p>
                 </div>
                 
                 <div class="col-4">
@@ -155,18 +137,15 @@
                         <li><a href="pages/basics.html">Основы</a></li>
                     </ul>
                 </div>
-                
             </div>
             
-            <!-- hr — горизонтальная линия (Kube) -->
             <hr>
             
-            <!-- text-center small — по центру, маленький текст (Kube) -->
             <p class="text-center small">&copy; 2026. Ломов Р.В., группа 835</p>
         </div>
     </footer>
 
-    <!-- Скрипт для мобильного меню -->
+    <!-- Скрипт для работы мобильного меню -->
     <script src="js/main.js"></script>
 
 </body>

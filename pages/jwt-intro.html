@@ -43,7 +43,6 @@
         <div class="row">
             
             <main class="col-9">
-                
                 <h1>Введение в JWT (JSON Web Token)</h1>
                 
                 <p class="big">В предыдущей главе мы разобрали классический подход к аутентификации через сессии и cookies. Этот метод хорошо работает для традиционных серверных приложений, но в эпоху мобильных приложений, одностраничных сайтов (SPA) и микросервисной архитектуры он начинает показывать свои ограничения. На смену сессиям пришёл новый стандарт — JWT.</p>
@@ -79,7 +78,6 @@
                     <li><strong>Децентрализация</strong> — токен может быть выпущен одним сервисом (например, сервисом аутентификации), а проверен другим (например, сервисом оплаты). Им не нужно иметь общую базу сессий.</li>
                 </ul>
 
-                <!-- message warning — жёлтый блок предупреждения (Kube) -->
                 <div class="message warning">
                     <strong>Недостатки JWT, о которых важно знать:</strong>
                     <ul style="margin-top: 0.5rem; margin-bottom: 0;">
@@ -94,12 +92,10 @@
                 
                 <p>Внешне JWT — это длинная строка, состоящая из трёх частей, разделённых точками. Каждая часть закодирована в формате Base64Url. Пример токена:</p>
                 
-                <!-- pre — блок кода (Kube стилизует автоматически) -->
                 <pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</code></pre>
                 
                 <p>На первый взгляд это просто набор символов, но на самом деле строка имеет чёткую структуру. В следующей главе мы подробно разберём, из каких частей состоит JWT и что хранится в каждой из них.</p>
 
-                <!-- bg-highlight — светло-голубой фон (Kube) -->
                 <div class="info-box bg-highlight">
                     <h3 class="h5">Где используется JWT?</h3>
                     <p>JWT применяется в самых разных сценариях современной разработки:</p>
@@ -123,7 +119,6 @@
             </main>
 
             <aside class="col-3 sidebar">
-                
                 <div class="sidebar-block">
                     <h3 class="h5">О сайте</h3>
                     <p class="small">Учебный проект, посвящённый современным методам аутентификации и авторизации в веб-приложениях.</p>
@@ -141,7 +136,6 @@
                         <li>JavaScript</li>
                     </ul>
                 </div>
-                
             </aside>
 
         </div>
@@ -157,8 +151,7 @@
                 </div>
                 <div class="col-4">
                     <h4>Контакты</h4>
-                    <p>Email: student@example.com</p>
-                    <p>GitHub: github.com/username</p>
+                    <p><a href="https://github.com/Silverom" target="_blank" rel="noopener">GitHub: Silverom</a></p>
                 </div>
                 <div class="col-4">
                     <h4>Быстрые ссылки</h4>
@@ -174,6 +167,7 @@
         </div>
     </footer>
 
+    <!-- Скрипт для работы мобильного меню -->
     <script src="../js/main.js"></script>
 
 </body>

@@ -43,7 +43,6 @@
         <div class="row">
             
             <main class="col-9">
-                
                 <h1>Структура JWT токена</h1>
                 
                 <p class="big">В предыдущей главе мы увидели, как выглядит JWT — длинная строка из букв, цифр и символов. Но за этой кажущейся случайностью скрывается чёткая и элегантная структура. Понимание того, как устроен токен изнутри, критически важно для его правильного использования и обеспечения безопасности.</p>
@@ -54,7 +53,6 @@
                 
                 <p>Формат токена можно представить следующей схемой:</p>
                 
-                <!-- pre/code — блок кода (Kube стилизует автоматически) -->
                 <pre><code>xxxxx.yyyyy.zzzzz
 Header.Payload.Signature</code></pre>
                 
@@ -125,7 +123,6 @@ Header.Payload.Signature</code></pre>
                 
                 <p>На изображении ниже наглядно показана структура JWT токена и процесс его создания:</p>
                 
-                <!-- figure/figcaption — семантическая обёртка для изображения с подписью -->
                 <figure>
                     <img src="../image/JWT_Tokken.png" 
                          alt="Схема структуры JWT токена: Header, Payload и Signature" 
@@ -134,7 +131,6 @@ Header.Payload.Signature</code></pre>
                     <figcaption class="small text-center">Рисунок 1. Структура JWT токена и процесс создания подписи</figcaption>
                 </figure>
 
-                <!-- message error — красный блок предупреждения (Kube) -->
                 <div class="message error">
                     <strong>Важное предупреждение о безопасности:</strong> никогда не помещайте чувствительные данные в Payload JWT! Payload только закодирован (Base64), но <strong>не зашифрован</strong>. Любой человек может скопировать токен, вставить его на сайт <a href="https://jwt.io" target="_blank">jwt.io</a> и увидеть всё содержимое. Поэтому в токене можно хранить ID пользователя, роль, время истечения, но нельзя — пароли, номера кредитных карт, персональные данные без дополнительного шифрования.
                 </div>
@@ -143,7 +139,6 @@ Header.Payload.Signature</code></pre>
                 
                 <p>Поскольку Header и Payload закодированы в Base64Url, их легко декодировать обратно в JSON. Это можно сделать несколькими способами:</p>
                 
-                <!-- ol — нумерованный список -->
                 <ol>
                     <li><strong>Вручную</strong> — скопировать часть токена и использовать любой онлайн-декодер Base64.</li>
                     <li><strong>На сайте jwt.io</strong> — вставить весь токен, и сайт автоматически покажет расшифрованные Header и Payload.</li>
@@ -152,7 +147,6 @@ Header.Payload.Signature</code></pre>
                 
                 <p>Однако <strong>проверить подпись</strong> (то есть убедиться, что токен не подделан) можно только зная секретный ключ, который хранится на сервере. Именно поэтому JWT безопасен: прочитать данные может любой, но изменить их без знания ключа — невозможно.</p>
 
-                <!-- bg-highlight — светло-голубой фон (Kube) -->
                 <div class="info-box bg-highlight">
                     <h3 class="h5">Краткое резюме</h3>
                     <p class="end">JWT состоит из трёх частей: Header (метаданные), Payload (данные пользователя) и Signature (криптографическая защита). Первые две части закодированы в Base64Url и легко читаемы, третья часть гарантирует целостность токена. Понимание этой структуры — ключ к правильному использованию JWT в ваших приложениях.</p>
@@ -165,7 +159,6 @@ Header.Payload.Signature</code></pre>
             </main>
 
             <aside class="col-3 sidebar">
-                
                 <div class="sidebar-block">
                     <h3 class="h5">О сайте</h3>
                     <p class="small">Учебный проект, посвящённый современным методам аутентификации и авторизации в веб-приложениях.</p>
@@ -183,7 +176,6 @@ Header.Payload.Signature</code></pre>
                         <li>JavaScript</li>
                     </ul>
                 </div>
-                
             </aside>
 
         </div>
@@ -199,8 +191,7 @@ Header.Payload.Signature</code></pre>
                 </div>
                 <div class="col-4">
                     <h4>Контакты</h4>
-                    <p>Email: student@example.com</p>
-                    <p>GitHub: github.com/username</p>
+                    <p><a href="https://github.com/Silverom" target="_blank" rel="noopener">GitHub: Silverom</a></p>
                 </div>
                 <div class="col-4">
                     <h4>Быстрые ссылки</h4>
@@ -216,6 +207,7 @@ Header.Payload.Signature</code></pre>
         </div>
     </footer>
 
+    <!-- Скрипт для работы мобильного меню -->
     <script src="../js/main.js"></script>
 
 </body>

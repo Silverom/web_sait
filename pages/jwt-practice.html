@@ -43,7 +43,6 @@
         <div class="row">
             
             <main class="col-9">
-                
                 <h1>Практика работы с JWT</h1>
                 
                 <p class="big">В предыдущих главах мы разобрали теорию: что такое JWT, зачем он нужен и как устроен изнутри. Теперь пришло время перейти к практике. В этой главе мы подробно рассмотрим процесс аутентификации с использованием JWT, посмотрим примеры кода и разберёмся, как правильно хранить токены в клиентских приложениях.</p>
@@ -52,7 +51,6 @@
                 
                 <p>Типичный сценарий использования JWT в веб-приложении выглядит следующим образом:</p>
                 
-                <!-- ol — нумерованный список (шаги процесса) -->
                 <ol>
                     <li><strong>Пользователь отправляет учётные данные.</strong> Клиент (браузер или мобильное приложение) отправляет на сервер логин и пароль через защищённое HTTPS-соединение.</li>
                     <li><strong>Сервер проверяет данные.</strong> Бэкенд сверяет полученные данные с записями в базе данных. Если логин и пароль верны — переходим к следующему шагу.</li>
@@ -72,7 +70,6 @@
                 
                 <p>Пример генерации JWT с использованием популярной библиотеки <code>jsonwebtoken</code>:</p>
                 
-                <!-- pre/code — блок кода (Kube стилизует автоматически) -->
                 <pre><code>const jwt = require('jsonwebtoken');
 
 const secretKey = 'your-super-secret-key';
@@ -136,7 +133,6 @@ function generateToken(user) {
                 
                 <p>Для упрощения работы с JWT в разных языках программирования существуют готовые библиотеки. Вот самые популярные из них:</p>
                 
-                <!-- table bordered striped — таблица с рамками и чередованием цветов строк (Kube) -->
                 <table class="bordered striped">
                     <thead>
                         <tr>
@@ -179,7 +175,6 @@ function generateToken(user) {
                     </tbody>
                 </table>
 
-                <!-- bg-highlight — светло-голубой фон (Kube) -->
                 <div class="info-box bg-highlight">
                     <h3 class="h5">Где хранить JWT на клиенте?</h3>
                     <p>Выбор места хранения токена — один из ключевых вопросов безопасности. Рассмотрим два основных варианта:</p>
@@ -207,7 +202,6 @@ function generateToken(user) {
                 
                 <p>Такой подход сочетает безопасность короткоживущих токенов с удобством долгой сессии для пользователя.</p>
 
-                <!-- message warning — жёлтый блок предупреждения (Kube) -->
                 <div class="message warning">
                     <strong>Частые ошибки при работе с JWT:</strong>
                     <ul style="margin-top: 0.5rem; margin-bottom: 0;">
@@ -230,7 +224,6 @@ function generateToken(user) {
             </main>
 
             <aside class="col-3 sidebar">
-                
                 <div class="sidebar-block">
                     <h3 class="h5">О сайте</h3>
                     <p class="small">Учебный проект, посвящённый современным методам аутентификации и авторизации в веб-приложениях.</p>
@@ -248,7 +241,6 @@ function generateToken(user) {
                         <li>JavaScript</li>
                     </ul>
                 </div>
-                
             </aside>
 
         </div>
@@ -264,8 +256,7 @@ function generateToken(user) {
                 </div>
                 <div class="col-4">
                     <h4>Контакты</h4>
-                    <p>Email: student@example.com</p>
-                    <p>GitHub: github.com/username</p>
+                    <p><a href="https://github.com/Silverom" target="_blank" rel="noopener">GitHub: Silverom</a></p>
                 </div>
                 <div class="col-4">
                     <h4>Быстрые ссылки</h4>
@@ -281,6 +272,7 @@ function generateToken(user) {
         </div>
     </footer>
 
+    <!-- Скрипт для работы мобильного меню -->
     <script src="../js/main.js"></script>
 
 </body>

@@ -43,7 +43,6 @@
         <div class="row">
             
             <main class="col-9">
-                
                 <h1>Поток OAuth 2.0: Authorization Code Flow</h1>
                 
                 <p class="big">В предыдущей главе мы познакомились с основами OAuth 2.0 и узнали о различных типах грантов. Теперь пришло время детально разобрать самый популярный и безопасный из них — <strong>Authorization Code Flow</strong>. Именно этот поток используется в большинстве веб-приложений, включая кнопки «Войти через Google» и «Войти через VK».</p>
@@ -103,7 +102,6 @@
                 
                 <p>Пример URL возврата:</p>
                 
-                <!-- pre/code — блок кода (Kube стилизует автоматически) -->
                 <pre><code>https://myshop.com/callback?code=4/P7q7W91a-oMsCeLvIaQm6bTrgtp7&state=xyz123</code></pre>
                 
                 <p>Важно: этот код одноразовый и живёт очень короткое время (обычно около 10 минут). Его нельзя использовать повторно.</p>
@@ -146,7 +144,6 @@ Authorization: Bearer ya29.a0AfH6SMBx...</code></pre>
                 
                 <p>На изображении ниже наглядно показан весь процесс Authorization Code Flow со всеми участниками и шагами:</p>
                 
-                <!-- figure/figcaption — семантическая обёртка для изображения с подписью -->
                 <figure>
                     <img src="../image/Diagramm.png" 
                          alt="Диаграмма Authorization Code Flow в OAuth 2.0" 
@@ -155,7 +152,6 @@ Authorization: Bearer ya29.a0AfH6SMBx...</code></pre>
                     <figcaption class="small text-center">Рисунок 2. Схема Authorization Code Flow в OAuth 2.0</figcaption>
                 </figure>
 
-                <!-- bg-highlight — светло-голубой фон (Kube) -->
                 <div class="info-box bg-highlight">
                     <h3 class="h5">Зачем нужен промежуточный код?</h3>
                     <p>Может показаться, что проще было бы сразу вернуть Access Token в браузер (как это делает устаревший Implicit Flow). Но использование промежуточного кода даёт важное преимущество безопасности:</p>
@@ -174,7 +170,6 @@ Authorization: Bearer ya29.a0AfH6SMBx...</code></pre>
                 
                 <p>Но пользователю неудобно входить заново каждый час. Здесь на помощь приходит Refresh Token:</p>
                 
-                <!-- ol — нумерованный список -->
                 <ol>
                     <li>Когда Access Token истекает, клиентское приложение обнаруживает это по ошибке <code>401 Unauthorized</code> от сервера ресурсов.</li>
                     <li>Приложение отправляет Refresh Token на специальный эндпоинт сервера авторизации (<code>/token</code> с параметром <code>grant_type=refresh_token</code>).</li>
@@ -184,7 +179,6 @@ Authorization: Bearer ya29.a0AfH6SMBx...</code></pre>
                 
                 <p>Refresh Token живёт значительно дольше (дни, недели или даже месяцы) и хранится в безопасном месте на сервере приложения. Если нужно полностью отозвать доступ (например, пользователь нажал «Выйти» или «Отозвать доступ» в настройках Google), сервер авторизации просто удаляет Refresh Token из своей базы.</p>
 
-                <!-- message error — красный блок предупреждения (Kube) -->
                 <div class="message error">
                     <strong>Критически важно: всегда используйте HTTPS!</strong> Весь процесс OAuth 2.0 должен происходить исключительно по защищённому протоколу HTTPS. Вот почему:
                     <ul style="margin-top: 0.5rem; margin-bottom: 0;">
@@ -216,7 +210,6 @@ Authorization: Bearer ya29.a0AfH6SMBx...</code></pre>
             </main>
 
             <aside class="col-3 sidebar">
-                
                 <div class="sidebar-block">
                     <h3 class="h5">О сайте</h3>
                     <p class="small">Учебный проект, посвящённый современным методам аутентификации и авторизации в веб-приложениях.</p>
@@ -234,7 +227,6 @@ Authorization: Bearer ya29.a0AfH6SMBx...</code></pre>
                         <li>JavaScript</li>
                     </ul>
                 </div>
-                
             </aside>
 
         </div>
@@ -250,8 +242,7 @@ Authorization: Bearer ya29.a0AfH6SMBx...</code></pre>
                 </div>
                 <div class="col-4">
                     <h4>Контакты</h4>
-                    <p>Email: student@example.com</p>
-                    <p>GitHub: github.com/username</p>
+                    <p><a href="https://github.com/Silverom" target="_blank" rel="noopener">GitHub: Silverom</a></p>
                 </div>
                 <div class="col-4">
                     <h4>Быстрые ссылки</h4>
@@ -267,6 +258,7 @@ Authorization: Bearer ya29.a0AfH6SMBx...</code></pre>
         </div>
     </footer>
 
+    <!-- Скрипт для работы мобильного меню -->
     <script src="../js/main.js"></script>
 
 </body>

@@ -43,7 +43,6 @@
         <div class="row">
             
             <main class="col-9">
-                
                 <h1>Безопасность и лучшие практики</h1>
                 
                 <p class="big">Мы прошли большой путь: разобрали классические сессии, современные JWT токены и протокол OAuth 2.0. Но знание механизмов — это только половина дела. Вторая, не менее важная часть — понимание того, какие угрозы существуют и как защитить своё приложение от атак. В этой заключительной главе мы поговорим о безопасности.</p>
@@ -70,7 +69,6 @@
                 <p>Атаки перебором направлены на подбор пароля или секретного ключа. Злоумышленник автоматически отправляет тысячи запросов, пытаясь угадать правильные данные.</p>
                 <p><strong>Как защититься:</strong> внедрить rate limiting (ограничение количества попыток), использовать CAPTCHA и двухфакторную аутентификацию (2FA).</p>
 
-                <!-- message error — красный блок (Kube) -->
                 <div class="message error">
                     <strong>Топ-5 ошибок разработчиков:</strong>
                     <ol style="margin-top: 0.5rem; margin-bottom: 0; padding-left: 1.5rem;">
@@ -86,7 +84,6 @@
                 
                 <p>На основе рассмотренных угроз можно сформулировать набор правил, которые сделают ваше приложение значительно безопаснее.</p>
 
-                <!-- bg-highlight — светло-голубой фон (Kube) -->
                 <div class="info-box bg-highlight">
                     <h3 class="h5">Для JWT:</h3>
                     <ul>
@@ -111,64 +108,17 @@
                 
                 <p>Для лучшего понимания материала рекомендуем посмотреть видео-лекцию, в которой подробно разбираются основные уязвимости JWT и способы их предотвращения:</p>
                 
-                <!-- video-container — адаптивный контейнер для видео из Kube (сохраняет 16:9) -->
                 <div class="video-container">
-                    <iframe 
-                        src="https://www.youtube.com/watch?v=IB9gsnlRt-4" 
-                        frameborder="0" 
-                        allow="clipboard-write; autoplay" 
+                    <iframe
+                        src="https://rutube.ru/play/embed/1ef7950b505b1866b4905e0f3b6552d5/"
+                        frameborder="0"
+                        allow="clipboard-write; autoplay"
                         allowfullscreen
                         title="Видео-лекция о безопасности JWT токенов">
                     </iframe>
                 </div>
                 <p class="small muted text-center"><em>Рисунок 3. Видео-лекция о безопасности JWT токенов (RuTube)</em></p>
-
-                <h2 class="h2">Форма обратной связи</h2>
                 
-                <p>Если у вас остались вопросы по материалу сайта, вы нашли ошибку или хотите предложить тему для следующей статьи — напишите нам через форму ниже. Мы обязательно ответим!</p>
-                
-                <!-- form — Kube автоматически стилизует поля внутри -->
-                <form class="form" action="#" method="post">
-                    
-                    <div class="form-item">
-                        <label for="name">Ваше имя:</label>
-                        <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
-                    </div>
-                    
-                    <div class="form-item">
-                        <label for="email">Email для связи:</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    </div>
-                    
-                    <div class="form-item">
-                        <label for="subject">Тема обращения:</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">-- Выберите тему --</option>
-                            <option value="question">Вопрос по материалу</option>
-                            <option value="error">Нашёл ошибку</option>
-                            <option value="suggestion">Предложение темы</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-item">
-                        <label for="message">Сообщение:</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Опишите ваш вопрос или предложение..." required></textarea>
-                    </div>
-                    
-                    <div class="form-item">
-                        <label class="checkbox">
-                            <input type="checkbox" name="agree" required>
-                            Я согласен на обработку персональных данных
-                        </label>
-                    </div>
-                    
-                    <div class="form-item">
-                        <button type="submit" class="button">Отправить сообщение</button>
-                    </div>
-                    
-                </form>
-
                 <h2 class="h2">Заключение</h2>
                 
                 <p>Начав с базовых понятий аутентификации и авторизации, мы разобрали три основных подхода: классические сессии, современные JWT токены и протокол OAuth 2.0. Узнали, как каждый из них работает изнутри, в каких случаях его лучше применять и какие подводные камни могут встретиться на пути.</p>
@@ -182,7 +132,6 @@
             </main>
 
             <aside class="col-3 sidebar">
-                
                 <div class="sidebar-block">
                     <h3 class="h5">О сайте</h3>
                     <p class="small">Учебный проект, посвящённый современным методам аутентификации и авторизации в веб-приложениях.</p>
@@ -200,7 +149,6 @@
                         <li>JavaScript</li>
                     </ul>
                 </div>
-                
             </aside>
 
         </div>
@@ -216,8 +164,7 @@
                 </div>
                 <div class="col-4">
                     <h4>Контакты</h4>
-                    <p>Email: student@example.com</p>
-                    <p>GitHub: github.com/username</p>
+                    <p><a href="https://github.com/Silverom" target="_blank" rel="noopener">GitHub: Silverom</a></p>
                 </div>
                 <div class="col-4">
                     <h4>Быстрые ссылки</h4>
@@ -233,6 +180,7 @@
         </div>
     </footer>
 
+    <!-- Скрипт для работы мобильного меню -->
     <script src="../js/main.js"></script>
 
 </body>

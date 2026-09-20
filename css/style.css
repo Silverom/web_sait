@@ -1,15 +1,4 @@
 /* ============================================
-   ФАЙЛ: style.css
-   ОПИСАНИЕ: Кастомные стили для сайта JWT & OAuth
-   Используются ТОЛЬКО для того, чего нет в Kube:
-   - Тёмная шапка и подвал
-   - Карточки с тенями
-   - Сайдбар
-   - Адаптивное мобильное меню
-   ============================================ */
-
-
-/* ============================================
    ШАПКА САЙТА (HEADER)
    ============================================ */
 
@@ -17,23 +6,21 @@
     background-color: #313439;
     padding: 1.5rem 0 1rem;
     margin-bottom: 2rem;
-    text-align: center; /* Центрируем всё содержимое */
+    text-align: center;
 }
 
-/* Логотип по центру */
 .site-logo {
     color: #fff;
-    margin: 0 0 1rem 0; /* Отступ снизу для меню */
+    margin: 0 0 1rem 0;
     font-size: 32px;
 }
 
-/* Навигация по центру под заголовком */
 .main-nav {
     margin: 0;
 }
 
 .nav-menu {
-    display: inline-flex; /* Горизонтальное меню по центру */
+    display: inline-flex;
     gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
@@ -55,15 +42,11 @@
 
 
 /* ============================================
-   2. КНОПКА БУРГЕР-МЕНЮ (МОБИЛЬНАЯ ВЕРСИЯ)
-   ============================================
-   Kube не даёт готового бургер-меню.
-   Делаем его сами: три полоски, которые 
-   превращаются в крестик при нажатии.
+   КНОПКА БУРГЕР-МЕНЮ (МОБИЛЬНАЯ ВЕРСИЯ)
    ============================================ */
 
 .menu-toggle {
-    display: none; /* Скрыта на десктопе */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -71,7 +54,6 @@
     margin-top: 8px;
 }
 
-/* Полоски бургера */
 .menu-toggle span {
     display: block;
     width: 25px;
@@ -83,18 +65,16 @@
 
 
 /* ============================================
-   3. КАРТОЧКИ РАЗДЕЛОВ
+   КАРТОЧКИ РАЗДЕЛОВ
    ============================================ */
 
-/* Сетка карточек — используем CSS Grid вместо Kube col-* */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 равные колонки */
-    gap: 1.5rem; /* Расстояние между карточками */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
     margin: 2rem 0;
 }
 
-/* Сама карточка */
 .card {
     background: #fff;
     padding: 1.5rem;
@@ -122,94 +102,67 @@
     flex-grow: 1;
 }
 
-/* Адаптивность карточек */
-@media (max-width: 991px) {
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшете */
-    }
-}
-
-@media (max-width: 768px) {
-    .cards-grid {
-        grid-template-columns: 1fr; /* 1 колонка на мобильном */
-    }
-}
-
 
 /* ============================================
-   4. ИНФОРМАЦИОННЫЙ БЛОК
-   ============================================
-   Используем bg-highlight из Kube для фона,
-   но добавляем свою левую границу для акцента.
+   ИНФОРМАЦИОННЫЙ БЛОК
    ============================================ */
 
 .info-box {
-    border-left: 4px solid #3794de; /* Синяя полоса слева */
-    padding: 1.5rem; /* Внутренние отступы */
-    margin: 2rem 0; /* Отступы сверху и снизу */
-    border-radius: 0 3px 3px 0; /* Скругление справа */
+    border-left: 4px solid #3794de;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 3px 3px 0;
 }
 
 
 /* ============================================
-   5. САЙДБАР (БОКОВАЯ ПАНЕЛЬ)
-   ============================================
-   Kube не даёт готового сайдбара.
-   Делаем белые блоки с рамкой для навигации 
-   и формы подписки.
+   САЙДБАР (БОКОВАЯ ПАНЕЛЬ)
    ============================================ */
 
-/* Отступ сайдбара сверху (чтобы выровнять с контентом) */
 .sidebar {
     margin-top: 0;
 }
 
-/* Блок внутри сайдбара */
 .sidebar-block {
     background: #fff;
     padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 3px;
-    margin-bottom: 1.5rem; /* Отступ между блоками */
+    margin-bottom: 1.5rem;
 }
 
-/* Заголовок блока сайдбара */
 .sidebar-block h3 {
     margin-top: 0;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Разделительная линия */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
 }
 
-/* Список навигации в сайдбаре */
 .sidebar-nav {
     margin: 0;
 }
 
-/* Пункты списка навигации */
 .sidebar-nav li {
     margin-bottom: 0.25rem;
 }
 
-/* Ссылки в навигации сайдбара */
 .sidebar-nav a {
-    display: block; /* Ссылка на всю ширину */
+    display: block;
     padding: 0.5rem;
-    color: #313439; /* Тёмный цвет текста */
+    color: #313439;
     text-decoration: none;
     border-radius: 3px;
     transition: background 0.2s, color 0.2s;
 }
 
-/* Ссылки при наведении */
 .sidebar-nav a:hover {
-    background: #f8f8f8; /* Светло-серый фон (цвет .bg-aluminum из Kube) */
-    color: #3794de; /* Синий цвет */
+    background: #f8f8f8;
+    color: #3794de;
 }
 
 
 /* ============================================
-   6. ПОДВАЛ САЙТА (FOOTER)
+   ПОДВАЛ САЙТА (FOOTER)
    ============================================ */
 
 .site-footer {
@@ -219,9 +172,8 @@
     margin-top: 4rem;
 }
 
-/* Стили для колонок подвала — добавляем отступы */
 .site-footer .col-4 {
-    padding: 0 1.5rem; /* Отступы между колонками */
+    padding: 0 1.5rem;
 }
 
 .site-footer h4 {
@@ -256,82 +208,33 @@
 
 
 /* ============================================
-   7. АДАПТИВНОСТЬ (МОБИЛЬНАЯ ВЕРСИЯ)
-   ============================================
-   Kube сам адаптирует сетку (col-*),
-   но нам нужно дополнительно:
-   - Показать бургер-меню
-   - Скрыть обычное меню
-   - Перестроить карточки в 1 колонку
+   БАЗОВЫЕ СТИЛИ КОНТЕЙНЕРА
    ============================================ */
 
-@media (max-width: 768px) {
-    /* Показываем кнопку бургера */
-    .menu-toggle {
-        display: block;
-    }
-    
-    /* Скрываем обычное меню */
-    .main-nav {
-        display: none;
-        width: 100%;
-        margin-top: 1rem;
-        padding-top: 1rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    /* Показываем меню когда добавлен класс is-active (через JS) */
-    .main-nav.is-active {
-        display: block;
-    }
-    
-    /* Меню в колонку на мобильных */
-    .nav-menu {
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    /* Пункты меню с разделителями */
-    .nav-menu li {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .nav-menu a {
-        display: block;
-        padding: 0.75rem 0;
-    }
-    
-    /* Сайдбар под контентом на мобильных */
-    .sidebar {
-        margin-top: 2rem;
-    }
-}
-/* Исправление проблемы с выравниванием */
 .container {
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 2rem !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-.row.gutters {
-    margin-left: 0 !important;
-}
 
 /* ============================================
-   АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ
+   АДАПТИВНОСТЬ (МОБИЛЬНАЯ ВЕРСИЯ)
    ============================================ */
 
-/* Планшеты и меньше (до 992px) */
 @media (max-width: 991px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .site-footer .col-4 {
         padding: 0 1rem;
         margin-bottom: 1.5rem;
     }
 }
 
-/* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
-    /* === ШАПКА И МЕНЮ === */
+    /* Шапка */
     .site-header {
         padding: 1rem 0;
     }
@@ -346,73 +249,56 @@
         margin-bottom: 1rem;
     }
     
-    /* Показываем кнопку бургера */
+    /* Бургер-меню */
     .menu-toggle {
         display: block;
         position: absolute;
         top: 1rem;
         right: 1rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
         z-index: 1000;
     }
     
-    .menu-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background: #fff;
-        margin: 5px 0;
-        transition: 0.3s;
-    }
-    
-    /* Скрываем меню по умолчанию */
     .main-nav {
         display: none;
         width: 100%;
         margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    /* Показываем меню когда есть класс is-active */
     .main-nav.is-active {
         display: block;
     }
     
-    /* Меню в колонку */
     .nav-menu {
         flex-direction: column;
         gap: 0;
     }
     
     .nav-menu li {
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .nav-menu a {
         display: block;
         padding: 1rem;
-        font-size: 16px; /* Чтобы не зумилось на iOS */
+        font-size: 16px;
     }
     
-    /* === ОСНОВНОЙ КОНТЕНТ === */
+    /* Контент */
     .container {
         padding: 0 1rem;
     }
     
-    /* На мобильном всё в одну колонку */
     .col-9, .col-3, .col-4 {
         width: 100%;
         margin-left: 0;
     }
     
-    /* Сайдбар под контентом */
     .sidebar {
         margin-top: 2rem;
     }
     
-    /* Уменьшаем заголовки */
     h1 {
         font-size: 24px;
         line-height: 28px;
@@ -423,100 +309,31 @@
         line-height: 24px;
     }
     
-    /* Текст не переносится по одному слову */
     p {
         word-wrap: break-word;
         hyphens: auto;
     }
     
-    /* Карточки в одну колонку */
     .cards-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
     
-    /* Таблица скроллится */
     table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
     
-    /* Меню в сайдбаре */
     .sidebar-nav a {
         font-size: 16px;
     }
     
-    /* Форма */
     input, textarea, select {
-        font-size: 16px; /* Предотвращает зум на iOS */
-    }
-}
-
-/* Маленькие мобильные (до 480px) */
-@media (max-width: 480px) {
-    .site-logo {
-        font-size: 18px;
+        font-size: 16px;
     }
     
-    h1 {
-        font-size: 20px;
-    }
-    
-    .card {
-        padding: 1rem;
-    }
-    
-    .button {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* ============================================
-   ФИНАЛЬНЫЕ ИСПРАВЛЕНИЯ
-   ============================================ */
-
-/* Убираем надпись "прокрутите" */
-pre::after {
-    display: none !important;
-}
-
-/* Длинный inline-код (токены, URL) переносится */
-p code, li code, td code {
-    word-break: break-all;
-    overflow-wrap: break-word;
-    white-space: normal;
-    display: inline-block;
-    max-width: 100%;
-}
-
-/* 1. Исправляем переносы в сайдбаре */
-.sidebar-block p {
-    word-wrap: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-}
-
-/* 2-3. Исправляем блоки кода */
-pre {
-    overflow-x: auto;
-    white-space: pre;
-    word-wrap: normal;
-    max-width: 100%;
-    box-sizing: border-box;
-    -webkit-overflow-scrolling: touch;
-}
-
-pre code {
-    white-space: pre;
-    word-break: normal;
-}
-
-/* На мобильном */
-@media (max-width: 768px) {
-    /* Сайдбар на всю ширину */
+    /* Сайдбар */
     .col-3, .sidebar {
         width: 100% !important;
         max-width: 100% !important;
@@ -532,6 +349,9 @@ pre code {
     }
     
     .sidebar-block p {
+        word-wrap: normal;
+        overflow-wrap: normal;
+        hyphens: none;
         line-height: 1.6;
     }
     
@@ -540,6 +360,8 @@ pre code {
         font-size: 11px;
         padding: 0.75rem;
         margin: 1rem 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     /* Подвал */
@@ -560,4 +382,74 @@ pre code {
         word-wrap: normal;
         overflow-wrap: normal;
     }
+}
+
+@media (max-width: 480px) {
+    .site-logo {
+        font-size: 18px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+    
+    .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* ============================================
+   ФИНАЛЬНЫЕ ИСПРАВЛЕНИЯ
+   ============================================ */
+
+pre::after {
+    display: none !important;
+}
+
+p code, li code, td code {
+    word-break: break-all;
+    overflow-wrap: break-word;
+    white-space: normal;
+    display: inline-block;
+    max-width: 100%;
+}
+
+pre {
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+    max-width: 100%;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+pre code {
+    white-space: pre;
+    word-break: normal;
+}
+
+
+main figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.diagram-image {
+    width: 1400px !important;
+    max-width: none !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 0 -200px !important; 
+}
+
+figure figcaption {
+    margin-top: 0.5rem;
+    text-align: center;
 }
