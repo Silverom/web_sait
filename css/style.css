@@ -453,3 +453,20 @@ figure figcaption {
     margin-top: 0.5rem;
     text-align: center;
 }
+
+/* ============================================
+   АДАПТИВНОСТЬ ИЗОБРАЖЕНИЙ ДЛЯ МОБИЛЬНЫХ
+   ============================================ */
+
+@media (max-width: 768px) {
+    .diagram-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+    
+    main figure {
+        overflow-x: hidden !important;
+    }
+}
